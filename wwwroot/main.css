@@ -1,0 +1,150 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: ArtifaktElement;
+}
+
+#header, #sidebar, #preview, #overlay {
+    position: absolute;
+}
+
+
+#header {
+    height: 3em;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sidebar {
+    width: 25%;
+    left: 0;
+    top: 3em;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+#preview {
+    width: 75%;
+    right: 0;
+    top: 3em;
+    bottom: 0;
+}
+
+#header > * {
+    height: 2em;
+    margin: 0 0.5em;
+}
+
+#login {
+    font-family: ArtifaktElement;
+    font-size: 1em;
+}
+
+#header .title {
+    height: auto;
+    margin-right: auto;
+}
+
+#tree {
+    margin: 0.5em;
+}
+
+#overlay {
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    display: none;
+}
+#overlay {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    display: none;
+    width: 100%;
+    top: 3em;
+    bottom: 0;
+}
+
+#overlay > .notification {
+    margin: auto;
+    padding: 1em;
+    max-width: 50%;
+    background: white;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        top: 3em;
+        bottom: 75%;
+    }
+    #preview {
+        width: 100%;
+        top: 25%;
+        bottom: 0;
+    }
+}
+
+.icon-hub:before {
+    background-image: url(https://raw.githubusercontent.com/primer/octicons/main/icons/apps-16.svg); /* or https://raw.githubusercontent.com/primer/octicons/main/icons/stack-16.svg */
+    background-size: cover;
+}
+
+.icon-project:before {
+    
+    background-image: url(https://raw.githubusercontent.com/primer/octicons/main/icons/project-16.svg); /* or https://raw.githubusercontent.com/primer/octicons/main/icons/organization-16.svg */
+    background-size: cover;
+}
+
+.icon-my-folder:before {
+    background-image: url(https://raw.githubusercontent.com/primer/octicons/main/icons/file-directory-16.svg);
+    background-size: cover;
+}
+
+.icon-item:before {
+    background-image: url(https://raw.githubusercontent.com/primer/octicons/main/icons/file-16.svg);
+    background-size: cover;
+}
+
+.icon-version:before {
+    background-image: url(https://raw.githubusercontent.com/primer/octicons/main/icons/clock-16.svg);
+    background-size: cover;
+}
+
+.custom-context-menu {
+    position: fixed;
+    z-index: 1000;
+    width: 75px !important; 
+    font-weight: bold;
+    border-radius: 8px;
+    display: flex;
+    padding: 2px;
+    transform: scale(0); 
+    transition: transform 0.2s ease-in-out, background-color 0.2s; 
+    cursor: pointer; 
+  }
+  .custom-context-menu-theme {
+    background: #00b3d3;
+  
+    hr {
+      background-color: #eee;
+    }
+  
+    & > *:not(hr) {
+      color: #eee;
+  
+      &:hover {
+        background: #ffffff;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      }
+      &:active {
+        background: #2473a5; /* Change the background color on click to your preference */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* Add a different box shadow for the click effect */
+      }
+    }
+  }
