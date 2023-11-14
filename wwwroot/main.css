@@ -115,36 +115,3 @@ body, html {
     background-image: url(https://raw.githubusercontent.com/primer/octicons/main/icons/clock-16.svg);
     background-size: cover;
 }
-
-.custom-context-menu {
-    position: fixed;
-    z-index: 1000;
-    width: 75px !important; 
-    font-weight: bold;
-    border-radius: 8px;
-    display: flex;
-    padding: 2px;
-    transform: scale(0); 
-    transition: transform 0.2s ease-in-out, background-color 0.2s; 
-    cursor: pointer; 
-  }
-  .custom-context-menu-theme {
-    background: #00b3d3;
-  
-    hr {
-      background-color: #eee;
-    }
-  
-    & > *:not(hr) {
-      color: #eee;
-  
-      &:hover {
-        background: #ffffff;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-      }
-      &:active {
-        background: #2473a5; /* Change the background color on click to your preference */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* Add a different box shadow for the click effect */
-      }
-    }
-  }
