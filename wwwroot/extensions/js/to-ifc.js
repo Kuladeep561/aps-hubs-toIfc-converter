@@ -101,7 +101,6 @@ async function saveBinaryFile(response, fileName) {
 async function getManifest(viewer, urn) {
   try {
     const status = await getJSON(`/api/designdata/${urn}/status`);
-    console.log(status);
 
     switch (status.status) {
       case "n/a":
